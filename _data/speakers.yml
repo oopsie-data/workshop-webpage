@@ -1,0 +1,35 @@
+- name: Andrea Bajcsy
+  title: Carnegie Mellon University
+  url: https://www.cs.cmu.edu/~abajcsy/
+  image: https://www.cs.cmu.edu/~abajcsy/images/andrea_bajcsy.jpg
+  role: Keynote
+
+- name: Pepijn Kooijmans
+  title: HuggingFace
+  url: https://github.com/pepijnk12
+  image: https://huggingface.co/datasets/huggingface/badges/resolve/main/hf-logo.png
+  role: Panelist
+
+- name: Karl Pertsch
+  title: Physical Intelligence
+  url: https://kpertsch.github.io/
+  image: https://kpertsch.github.io/images/me.png
+  role: Panelist
+
+- name: Yang Gao
+  title: Tsinghua University
+  url: https://yang-gao.weebly.com/
+  image: https://yang-gao.weebly.com/uploads/1/0/7/8/107807963/published/photo2-square.jpg
+  role: Panelist (tentative)
+
+- name: Julie Shah
+  title: MIT / Lila Sciences
+  url: https://interactive.mit.edu/about/people/julie
+  image: https://interactive.mit.edu/sites/default/files/images/julie_0.jpg
+  role: Panelist (requested)
+
+- name: Dorsa Sadigh
+  title: Stanford University
+  url: https://dorsa.fyi/
+  image: https://dorsa.fyi/img/dorsa-portrait.jpeg
+  role: Panelist (requested)

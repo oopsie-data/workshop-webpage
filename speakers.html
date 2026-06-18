@@ -1,0 +1,24 @@
+---
+layout: default
+---
+
+<h3>Invited Speakers</h3>
+<br>
+
+<center>
+<div style="text-align: center;">
+<div id="speakers" class="row">
+<div class="break"></div>
+<div class="speakers-grid">
+{%- for person in site.data.speakers -%}
+<div class="person">
+  <img src="{{ person.image }}" height="170px" /><div style="height:12px;"></div>
+  <a href="{{ person.url }}">{{ person.name }}</a><div style="height:4px;"></div>
+  <span>{{ person.title }}</span><div style="height:2px;"></div>
+  <span><em>{{ person.role }}</em></span>
+</div>
+{%- endfor -%}
+</div>
+</div>
+</div>
+</center>
