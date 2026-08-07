@@ -1,11 +1,19 @@
 - name: Roberto Martín-Martín
   title: UT Austin
   url: https://robertomartinmartin.com/
+  image: /images/advisors/roberto.jpg
 
 - name: Peter Stone
   title: UT Austin
   url: https://www.cs.utexas.edu/~pstone/
+  image: /images/advisors/peter.png
 
 - name: Amy Zhang
   title: UT Austin
   url: https://amyzhang.github.io/
+  image: /images/advisors/amy.png
+
+- name: Sergey Levine
+  title: UC Berkeley
+  url: https://people.eecs.berkeley.edu/~svlevine/
+  image: /images/advisors/sergey.png

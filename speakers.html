@@ -2,20 +2,48 @@
 layout: default
 ---
 
-<h3>Invited Speakers</h3>
+{%- assign keynotes = site.data.speakers | where_exp: "p", "p.role contains 'Keynote'" -%}
+{%- assign panelists = site.data.speakers | where_exp: "p", "p.role contains 'Panelist'" -%}
+
+<h3>Keynote</h3>
 <br>
 
 <center>
 <div style="text-align: center;">
-<div id="speakers" class="row">
+<div class="row">
 <div class="break"></div>
 <div class="speakers-grid">
-{%- for person in site.data.speakers -%}
+{%- for person in keynotes -%}
 <div class="person">
   <img src="{{ person.image }}" height="170px" /><div style="height:12px;"></div>
   <a href="{{ person.url }}">{{ person.name }}</a><div style="height:4px;"></div>
-  <span>{{ person.title }}</span><div style="height:2px;"></div>
-  <span><em>{{ person.role }}</em></span>
+  <span>{{ person.title }}</span>
+  {%- assign note = person.role | remove_first: "Keynote" | strip -%}
+  {%- if note != "" %}<div style="height:2px;"></div>
+  <span><em>{{ note }}</em></span>{% endif %}
+</div>
+{%- endfor -%}
+</div>
+</div>
+</div>
+</center>
+
+<h3>Panel</h3>
+<br>
+
+<center>
+<div style="text-align: center;">
+<div class="row">
+<div class="break"></div>
+<div class="speakers-grid">
+{%- for person in panelists -%}
+<div class="person">
+  <img src="{{ person.image }}" height="170px" /><div style="height:12px;"></div>
+  <a href="{{ person.url }}">{{ person.name }}</a><div style="height:4px;"></div>
+  <span>{{ person.title }}</span>
+  {%- assign note = person.role | remove_first: "Panelist" | strip -%}
+  {%- if note != "" %}<div style="height:2px;"></div>
+  <span><em>{{ note }}</em></span>{% endif %}
 </div>
 {%- endfor -%}
 </div>

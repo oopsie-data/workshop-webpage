@@ -1,21 +1,34 @@
 - name: Arpit Bahety
   title: UT Austin
-  url: https://arpitbahety.github.io/
+  url: https://arpitrf.github.io/
+  image: /images/team/arpit.jpg
 
 - name: Zhiyuan Zhou
   title: UC Berkeley
+  url: https://zhouzypaul.github.io/
+  image: /images/team/paul.png
 
 - name: Renhao Wang
   title: UC Berkeley
+  url: https://renwang435.github.io/
+  image: /images/team/ren.jpg
 
 - name: Jiahui Chen
   title: UT Austin
+  url: https://jiahuikchen.github.io/
+  image: /images/team/karen.PNG
 
 - name: Carl Qi
   title: UT Austin
+  url: https://carl-qi.github.io/
+  image: /images/team/carl.jpeg
 
 - name: Max Rudolph
   title: UT Austin
+  url: https://maxrudolph1.github.io/
+  image: /images/team/max.jpg
 
 - name: Maria Attarian
-  title: ""
+  title: University of Toronto
+  url: https://jmattarian.com/
+  image: /images/team/maria.jpg

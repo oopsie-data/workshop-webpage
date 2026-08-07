@@ -2,8 +2,87 @@
 layout: default
 ---
 
-<div class="row justify-content-center">
-  <p class="text-center" style="font-size: 1.2em; margin-top: 2em;">
-    More details coming soon. Visit <a href="https://oopsie-data.com">oopsie-data.com</a> to learn more about the project.
-  </p>
+<p>
+  Robot learning has made rapid progress on datasets of clean, successful demonstrations. But a policy trained only on curated successes only knows what to do when everything goes well ... What if it doesn't?
+</p>
+
+<p>
+  This workshop is about other data: execution failures and near-misses, noisy or suboptimal demonstrations, out-of-distribution events, and the unexpected things people do around robots. Every lab produces it, and almost none of it is documented, shared, or reused.
+</p>
+
+<p>
+  We want to work out, together, how to gather this data, how to curate it, and finally, what to do with it. 
+  Can human errors in the dataset provide important context, and how can we capture this?
+  Can imperfect data help robots succeed in imperfect settings? 
+  Which failures actually matter, and how should they be labelled? 
+  What would shared infrastructure for collecting and publishing this data across academia and industry look like?
+</p>
+
+<p>
+  We invite you to join us to address these questions, any many more. Come with a paper, a dataset, or just an opinion. Alongside talks and a panel, a collaboration session and poster session give everyone room to argue about all things imperfect data directly. We will fold the results into a community white-paper and share your input with the rest of the CoRL community.
+</p>
+
+<p>
+  Last but not least, we are working on a format for you to directly submit and present imperfect data, and maybe get an award for the most hilarious failure.
+</p>
+
+<p>
+  We meet on <strong>Thursday, November 12, 2026</strong> at the <strong>JW Marriott Austin</strong> in Austin, Texas &mdash; the workshop day following the main CoRL conference. The programme runs as a morning session; see the <a href="{{ '/schedule.html' | relative_url }}">schedule</a> for details, and the <a href="{{ '/submit.html' | relative_url }}">call for contributions</a> to take part.
+</p>
+
+<h2>Organizers</h2>
+
+<center>
+<div style="text-align: center;">
+<div class="row">
+<div class="break"></div>
+<div class="speakers-grid">
+{%- for person in site.data.organizers -%}
+<div class="person">
+  <img src="{{ person.image | relative_url }}" height="170px" /><div style="height:12px;"></div>
+  <a href="{{ person.url }}">{{ person.name }}</a><div style="height:4px;"></div>
+  <span>{{ person.title }}</span>
 </div>
+{%- endfor -%}
+</div>
+</div>
+</div>
+</center>
+
+<h2>Oopsie-Data Team</h2>
+
+<center>
+<div style="text-align: center;">
+<div class="row">
+<div class="break"></div>
+<div class="speakers-grid">
+{%- for person in site.data.team -%}
+<div class="person">
+  <img src="{{ person.image | relative_url }}" height="170px" /><div style="height:12px;"></div>
+  <a href="{{ person.url }}">{{ person.name }}</a><div style="height:4px;"></div>
+  <span>{{ person.title }}</span>
+</div>
+{%- endfor -%}
+</div>
+</div>
+</div>
+</center>
+
+<h2>Faculty Advisors</h2>
+
+<center>
+<div style="text-align: center;">
+<div class="row">
+<div class="break"></div>
+<div class="speakers-grid">
+{%- for person in site.data.advisors -%}
+<div class="person">
+  <img src="{{ person.image | relative_url }}" height="170px" /><div style="height:12px;"></div>
+  <a href="{{ person.url }}">{{ person.name }}</a><div style="height:4px;"></div>
+  <span>{{ person.title }}</span>
+</div>
+{%- endfor -%}
+</div>
+</div>
+</div>
+</center>
