@@ -15,11 +15,11 @@ layout: default
 <div class="speakers-grid">
 {%- for person in keynotes -%}
 <div class="person">
-  <img src="{{ person.image }}" height="170px" /><div style="height:12px;"></div>
-  <a href="{{ person.url }}">{{ person.name }}</a><div style="height:4px;"></div>
+  <a class="person-photo" href="{{ person.url }}"><img src="{{ person.image }}" alt="{{ person.name }}" /></a>
+  <a class="person-name" href="{{ person.url }}">{{ person.name }}</a>
   <span>{{ person.title }}</span>
   {%- assign note = person.role | remove_first: "Keynote" | strip -%}
-  {%- if note != "" %}<div style="height:2px;"></div>
+  {%- if note != "" %}
   <span><em>{{ note }}</em></span>{% endif %}
 </div>
 {%- endfor -%}
@@ -38,11 +38,11 @@ layout: default
 <div class="speakers-grid">
 {%- for person in panelists -%}
 <div class="person">
-  <img src="{{ person.image }}" height="170px" /><div style="height:12px;"></div>
-  <a href="{{ person.url }}">{{ person.name }}</a><div style="height:4px;"></div>
+  <a class="person-photo" href="{{ person.url }}"><img src="{{ person.image }}" alt="{{ person.name }}" /></a>
+  <a class="person-name" href="{{ person.url }}">{{ person.name }}</a>
   <span>{{ person.title }}</span>
   {%- assign note = person.role | remove_first: "Panelist" | strip -%}
-  {%- if note != "" %}<div style="height:2px;"></div>
+  {%- if note != "" %}
   <span><em>{{ note }}</em></span>{% endif %}
 </div>
 {%- endfor -%}

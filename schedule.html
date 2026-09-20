@@ -2,6 +2,11 @@
 layout: default
 ---
 
+{%- assign andrea = site.data.speakers | where: "name", "Andrea Bajcsy" | first -%}
+{%- assign pepijn = site.data.speakers | where: "name", "Pepijn Kooijmans" | first -%}
+{%- assign karl = site.data.speakers | where: "name", "Karl Pertsch" | first -%}
+{%- assign sonia = site.data.speakers | where: "name", "Sonia Chernova" | first -%}
+
 <div class="schedule">
   <p>Tentative schedule (morning session). All times are local conference time.</p>
 
@@ -22,7 +27,7 @@ layout: default
       <tr>
         <td>8:45 – 9:30</td>
         <td>Keynote Address</td>
-        <td>Andrea Bajcsy &amp; student</td>
+        <td><a href="{{ andrea.url }}">Andrea Bajcsy</a> &amp; student</td>
       </tr>
       <tr>
         <td>9:30 – 10:30</td>
@@ -37,7 +42,7 @@ layout: default
       <tr>
         <td>11:30 – 12:00</td>
         <td>Panel: "What is good data for physical AI? How do we obtain it, process it, and use it?"</td>
-        <td>Pepijn Kooijmans, Karl Pertsch, Sonia Chernova</td>
+        <td><a href="{{ pepijn.url }}">Pepijn Kooijmans</a>, <a href="{{ karl.url }}">Karl Pertsch</a>, <a href="{{ sonia.url }}">Sonia Chernova</a></td>
       </tr>
       <tr>
         <td>12:15 – 12:30</td>

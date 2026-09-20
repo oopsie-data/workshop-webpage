@@ -1,50 +1,79 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
   <title>Oops, I Erred — Collecting, Curating and Using Imperfect Data for Realistic Scenarios</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="{{ '/images/favicon.ico' | relative_url }}">
   <link href="{{ '/css/style.css' | relative_url }}" rel="stylesheet">
 </head>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light" id="navbar">
-  <div class="container" id="header">
-    <div>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-main" aria-controls="navbar-main" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-    </div>
+<body>
 
-    <div class="collapse navbar-collapse" id="navbar-main">
-      <ul class="navbar-nav mx-auto">
-        <li class="nav-link"><a href="{{ '/index.html' | relative_url }}">About</a></li>
-        <li class="nav-link"><a href="{{ '/speakers.html' | relative_url }}">Speakers</a></li>
-        <li class="nav-link"><a href="{{ '/schedule.html' | relative_url }}">Schedule</a></li>
-        <li class="nav-link"><a href="{{ '/submit.html' | relative_url }}">Call for Contributions</a></li>
-      </ul>
+<nav class="topbar">
+  <div class="wrap topbar-inner">
+    <a class="brand" href="{{ '/index.html' | relative_url }}">
+      <span class="brand-mark">Oops,&nbsp;I&nbsp;Erred</span>
+      <span class="brand-sub">CoRL&nbsp;2026 Workshop</span>
+    </a>
+
+    <button class="nav-toggle" type="button" data-toggle="collapse" data-target="#nav-links" aria-controls="nav-links" aria-expanded="false" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+
+    <div class="collapse nav-links" id="nav-links">
+      {%- assign nav_pages = "index.html,About|speakers.html,Speakers|schedule.html,Schedule|submit.html,Call for Contributions" | split: "|" -%}
+      {%- for item in nav_pages -%}
+        {%- assign parts = item | split: "," -%}
+        {%- assign target = parts[0] -%}
+        <a class="nav-item{% if page.url contains target %} active{% endif %}" href="{{ target | prepend: '/' | relative_url }}">{{ parts[1] }}</a>
+      {%- endfor -%}
+      <a class="nav-cta" href="https://openreview.net/group?id=robot-learning.org/CoRL/2026/Workshop/Oopsie">Submit &rarr;</a>
     </div>
   </div>
 </nav>
 
-<body>
-  <div class="container" id="content">
-    <div class="page-content">
-      <div class="row justify-content-center">
-        <h1 class="text-center">"Oops, I Erred" — Collecting, Curating and Using Imperfect Data for Realistic Scenarios</h1>
-        <div class="break"></div>
-        <h4 class="text-center">A workshop at <a href="https://www.corl.org/">CoRL 2026</a></h4>
-        <div class="break"></div>
-        <h4 class="text-center">November 12, 2026 &middot; JW Marriott Austin, Austin, Texas</h4>
-        <hr>
-      </div>
+<header class="hero">
+  <div class="wrap hero-inner">
+   <div class="hero-text">
+    <p class="hero-eyebrow">CoRL 2026 Workshop</p>
+    <h1 class="hero-title">&ldquo;Oops,&nbsp;I&nbsp;Erred&rdquo;</h1>
+    <p class="hero-subtitle">Collecting, Curating and Using Imperfect Data for Realistic Scenarios</p>
+    <ul class="hero-facts">
+      <li><span class="fact-label">Venue</span><span class="fact-value"><a href="https://www.corl.org/">CoRL 2026</a>, JW Marriott Austin</span></li>
+      <li><span class="fact-label">Date</span><span class="fact-value">November 12, 2026</span></li>
+      <li><span class="fact-label">Deadline</span><span class="fact-value is-deadline">October 2, 2026</span></li>
+    </ul>
+   </div>
 
-      {{ content }}
-
-    </div>
+   <a class="org-lockup" href="https://oopsie-data.com" title="Oopsie-Data">
+     <span class="org-lockup-pre">An</span>
+     <img class="org-lockup-logo" src="{{ '/images/oopsie-logo.png' | relative_url }}" alt="Oopsie-Data" />
+     <span class="org-lockup-post">organized<br>workshop</span>
+   </a>
   </div>
+</header>
+
+
+<main id="content" class="wrap">
+  <article class="panel">
+    {{ content }}
+  </article>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p class="footer-title">&ldquo;Oops, I Erred&rdquo; &mdash; CoRL 2026 Workshop</p>
+    <p class="footer-sub">Organized by the <a href="https://oopsie-data.com">Oopsie-Data</a> team</p>
+  </div>
+</footer>
+
 </body>
 </html>
