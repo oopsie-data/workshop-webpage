@@ -4,6 +4,9 @@ services:
     ports:
       - "4000:4000"
       - "35729:35729"
+    dns:
+      - 1.1.1.1
+      - 8.8.8.8
     volumes:
       - .:/site
     command: bundle exec jekyll serve --host 0.0.0.0 --livereload --force_polling

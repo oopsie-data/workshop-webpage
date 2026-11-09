@@ -395,6 +395,22 @@ table .time { width: 150px; }
   transform: translateY(-2px);
 }
 
+/* ---------- sponsors ---------- */
+
+.sponsor-logos {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+}
+
+.sponsor-logos img {
+  height: 120px;
+  width: auto;
+  max-width: 100%;
+}
+
 /* ---------- footer ---------- */
 
 .site-footer {
