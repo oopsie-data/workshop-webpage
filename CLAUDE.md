@@ -27,7 +27,7 @@ The site auto-rebuilds on file changes via LiveReload (port 35729).
   - `organizers.yml` — 3 core organizers (photo cards on index)
   - `speakers.yml` — invited speakers with `role` field (Keynote/Panelist/tentative/requested)
   - `team.yml` — Oopsie-Data team members (inline list on index)
-  - `advisors.yml` — faculty advisors (inline list on index)
+  - `advisors.yml` — advisors (inline list on index)
 - **Pages**: `index.html` (about + organizers), `speakers.html`, `schedule.html`, `submit.html`
 - **`css/style.css`**: single stylesheet, uses `.person` cards and `.speakers-grid` responsive grid
 
